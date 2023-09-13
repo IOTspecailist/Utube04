@@ -1,0 +1,14 @@
+extends base
+include mixins/video
+
+//- 조회화면
+block content
+    form(method="GET")
+        input(placeholder = "Search by title", name="keyword", type="text")
+        input(type="submit", value="Search now!")
+    div
+        each video in videos
+            +video(video)
+
+//- Pug 템플릿 엔진에서 + 기호는 mixin을 호출하는 데 사용됩니다.
+//- mixin은 재사용 가능한 Pug 코드 블록을 의미합니다.

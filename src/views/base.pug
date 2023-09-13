@@ -9,7 +9,23 @@ html (lang="ko")
             nav 
                 ul 
                     li 
-                        a(href="/") Home
+                        a(href="/") home
+                    if loggedIn
+                        li
+                            a(href="/logout") Log Out
+                        li
+                            a(href="/my-profile") #{loggedInUser.name}의프로필
+                    else 
+                        li
+                            a(href="/login") Log In 
+                        li
+                            a(href="/join") JOIN!                    
+                    li
+                        a(href="/videos/upload") click-upload
+                    li 
+                        a(href="/search") search video
+
         main 
             block content
     include partials/footer
+    //-pug에서 middlewares.js에 세팅한 locals에 접근한것을 확인할 수 있다

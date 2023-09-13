@@ -1,0 +1,12 @@
+extends base
+
+block content 
+    if errorMessage
+        span=errorMessage
+    form(method="POST") 
+        input(placeholder="Title!", required, type = "text", name="title", maxlength=20)
+        input(placeholder="Descrition!!", required, type = "text", name="description", minlength=20)
+        input(placeholder="Hashtags. separated by comma.!!", required, type="text", name = "hashtags")
+        input(type="submit", value="Upload Video")
+        //-action이 없으면 이 form이 존재하는 url로 요청을 보낸다
+        //-즉 router에 이 페이지의 post요청을 처리하는 로직이 있다면 action이 필요 없다

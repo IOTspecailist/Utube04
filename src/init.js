@@ -1,3 +1,6 @@
+import "./db"; //import하는 파일에서 함수 호출하는 부분이 있으면, import할떄 호출된다
+import "./models/Video";
+import "./models/User"; 
 import app from "./server";
 
 const PORT = 4000;
@@ -6,8 +9,8 @@ const PORT = 4000;
 //JS에선 function도 value 취급 하기때문에 변수 키워드에 할당 가능
 //중괄호 없으면 1라인만 쓸 수있고, 화살표 함수도 중괄호 사용가능하긴 함
 const handleListening = () =>
-    console.log(`✅Server listening on http://localhost:${PORT} 🚀`);
- 
+    console.log(`🚀🚀🚀🚀🚀🚀🚀🚀 Server listening on http://localhost:${PORT} 🚀🚀🚀🚀🚀🚀🚀🚀`);
+
 app.listen(PORT, handleListening);
 
 //init은 server를 import하고 server는 globalRouter를 import하고 globalRouter는 videoController를 import한다
